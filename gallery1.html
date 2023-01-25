@@ -3,25 +3,27 @@
 
 <head>
   	<meta charset="utf-8" />
-  	<title>Swiper demo</title>
+  	<title>Gallery - PhotoTronix</title>
  	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    <link rel="icon" type="image/x-icon" href="Picture1.png">
+    <link rel="icon" type="image/x-icon" href="favicon.jpg">
     <style>
     	html,
-        body {
-        	position: relative;
-      		height: 100%;
+      body {
+        position: relative;
+      	height: 100%;
     	}
 
     	body {
-      		font-size: 15px;
-		    margin: 0;
-		    padding: 0;
-		    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(background.jpg);
-	   		background-attachment: fixed;
-			background-size: cover;
-		}
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        min-height: 100vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(background.jpg);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+      }
 
     	.swiper {
       		width: 100%;
@@ -68,10 +70,10 @@
 
       .dropdown-content {
         color: white;
-        min-width: 80px;
+        min-width: 90px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        padding: 12px 16px;
-        z-index: 1;
+        padding: 12px;
+        z-index: 999;
         cursor: pointer;
         font-weight: bold;
         background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5));
@@ -81,37 +83,24 @@
         right: 1%;
         border: 1px solid #fff;
         text-align: center;
-        width: 90px;
+        width: 95px;
+        min-height: 50px;
       }
 
       .dropdown:hover .dropdown-content {
         display: block;
-
       }
 
       .dropdown-content p {
-        width: 80px;
-        padding: 10px;
+        width: 90px;
+        padding: 1px;
         border-bottom: 1px dotted white;
         background: transparent;
-      } 
-
-      span {
-        text-decoration: none;
-        color: #fff;
-        padding: 5px 20px;
-        border: 1px solid #fff;
-        transition: 0.9s ease;
-      }
-
-      span:hover {
-        background-color: #fff;
-        color: #000;
       }
 
       ul{
         float: right;
-        Lists-style-type: none;
+        lists-style-type: none;
         margin-top: 25px;
       }
 
@@ -136,16 +125,29 @@
         background-color: #fff;
         color: #000;
       }
+
+      span {
+        text-decoration: none;
+        color: #fff;
+        padding: 5px 20px;
+        border: 1px solid #fff;
+        transition: 0.9s ease;
+      }
+
+      span:hover {
+        background-color: #fff;
+        color: #000;
+      }
   	</style>
 </head>
 
 <body>
   <ul>
-    <li><a href="index">Home</a></li>
-    <li class="active"><a href="gallery1">Gallery</a></li>
-    <li><a href="services">Services</a></li>
+    <li><a href="#">Home</a></li>
+    <li class="active"><a href="#">Gallery</a></li>
+    <li><a href="#">Services</a></li>
     <li><a href="#">Video</a></li>
-    <li><a href="SignUp">Sign up</a></li>
+    <li><a href="#">Sign up</a></li>
     <div class="dropdown">
         <span>My Portfolio</span>
           <div class="dropdown-content">
